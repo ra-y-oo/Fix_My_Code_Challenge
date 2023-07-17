@@ -6,14 +6,7 @@ class square():
     height = 0
 
     
-    def __init__(self, width, height, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        if self.width == self.height:
-            self.width = width
-            self.height = height
-        else:
-            raise ValueError("Width and height must be same")
-            
+    def __init__(self, *args, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
